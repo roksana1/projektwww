@@ -1,0 +1,14 @@
+
+
+<%= form_for [ @article, @comment ] do |f| %>
+  <div class="form-group">
+    <p>login <%= f.text_field :author_name %></p>
+
+    <p>
+    <%= f.text_area :body, class: 'comm' %>
+    </p>
+  </div>
+  <div class="actions">
+    <p><%= f.submit 'Dodaj', class: 'btn btn-default' %></p>
+  </div>
+<% end %>

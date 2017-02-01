@@ -1,0 +1,25 @@
+<div class="blog-log">
+    <div class="container">
+        <div class="panel panel-default widoczek log">
+            <h1>Logowanie</h1>
+            
+            <%= form_tag author_sessions_path, method: :post do %>
+                </br>
+                <p>email
+                <%= text_field_tag :email %>
+                </p>
+                <p>hasło
+                <%= password_field_tag :password %>
+                </p>
+                </br>
+                <%= submit_tag "Zaloguj"%>
+              
+            <% end %>
+            </br></br>
+            <div class="panel-footer">
+            <a><%= link_to 'Wróć', articles_path %></a>
+            </div>
+            
+        </div>
+    </div>
+</div>

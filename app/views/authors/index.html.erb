@@ -1,0 +1,42 @@
+<%= render partial: 'articles/menu' %>
+<div class="blog-log">
+  <div class="container">
+    <div class="panel panel-default widoczek log">
+      
+    <h1>lista moderatorów</h1>
+    </br>
+    <table id="myTable">
+        <tr class="header">
+          <th style="width:25%;"><a>Login</a></th>
+          <th style="width:45%;"><a>Email</a></th>
+          <th style="width:10%;"></th>
+          <th style="width:10%;"></th>
+          <th style="width:10%;"></th>
+        </tr>
+        <% @authors.each do |author| %>
+          <tr>
+            <td><%= author.username %></td>
+            <td><%= author.email %></td>
+            <td><a><%= link_to '', author %></a></td>
+            <td><%= link_to 'Edytuj', edit_author_path(author) %></td>
+            <td><%= link_to 'Usuń', author, method: :delete, data: { confirm: 'Jestes pewny?' } %></td>
+          </tr>
+        <% end %>
+    </table>
+    
+    <br>
+    <div class="panel-footer">
+        <a><%= link_to 'Nowy moderator', new_author_path %></a><a><%= link_to 'Wróć', articles_path %></a>
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+<footer>
+  <% if logged_in? %>
+    <%= "Zalogowano jako #{current_user.email}" %>
+  <% else %>
+   <%= link_to "Zaloguj", login_path %>
+  <% end %>
+</footer>

@@ -1,0 +1,51 @@
+    <%= render partial: 'articles/menu' %>
+<div class="blog">
+  <div class="container">
+
+    <div class="row">
+       <div class="col-md-9">
+        <div class="box"> 
+          <% @articles.each do |article| %>
+          
+            <div class="col-sm-6 col-md-4">
+              
+              <div class="thumbnail">
+                <div class="thumbfoto">
+                  <%= link_to image_tag(article.image), article, class: 'miniatura' %>
+                </div>
+                <div class="caption">
+                  <p class="datadod">
+                    <%= time_ago_in_words article.created_at, class: "datadod" %> ago 
+                  </p>
+                  <h3><%= link_to article.title, article_path(article), class: 'article_title' %></h3>
+                  <p>
+                  <%= raw article.body.truncate(140, separator: /\./) %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+        <div class="col-md-3">
+          <%= render partial: 'articles/search' %>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer>
+  <% if logged_in? %>
+    <%= "Zalogowano jako #{current_user.email}" %>
+  <% else %>
+   <%= link_to "Zaloguj", login_path %>
+  <% end %>
+</footer>
+<script>
+  search();
+</script>
+<script>
+  delate();
+</script>
+
+

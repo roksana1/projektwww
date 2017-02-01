@@ -1,0 +1,31 @@
+<div class="form-art">
+<%= form_for(@article, html: {multipart: true}) do |f| %>
+  <ul>
+  <% @article.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>tytuł
+    <%= f.text_field :title %>
+  </p>
+  <p>tagi
+  <%= f.text_field :tag_list %>
+  </p>
+  <p>
+    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Wybierz zdjęcie <%= f.file_field :image %>
+  </p>
+  <% if @article.image.exists? %>
+  <div class="zdjecieart">
+      <%= image_tag @article.image.url %><br/>
+  </div>
+  <% end %>
+</p>
+  <p>
+    <%= f.text_area :body, class: 'horiz' %>
+  </p>
+
+  <p>
+   <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> <%= f.submit 'Dodaj!'%>
+  </p>
+<% end %>
+</div>

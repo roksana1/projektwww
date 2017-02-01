@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Atelier Piękna</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="assets/touchTouch/touchTouch.jquery.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+  <link rel="stylesheet" href="assets/stylesheets/style.css.scss">
+  <link rel="stylesheet" href="assets/touchTouch/touchTouch.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link href='//fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+  <link href='//fonts.googleapis.com/css?family=Khula' rel='stylesheet'>
+  
+</head>
+<body>
+
+      <%= yield %>
+
+
+</body>
+</html>

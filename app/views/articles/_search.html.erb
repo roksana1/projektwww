@@ -1,0 +1,5 @@
+<%= form_tag('search', method: 'get', class: 'tag-search-form') do %>
+
+    <%= text_field_tag :tag, params[:tag], placeholder: "Szukaj artykułów" %><%= submit_tag("Szukaj") %>
+    
+<% end %>

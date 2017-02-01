@@ -1,0 +1,74 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+html{
+	background:url('../img/tile.jpg') repeat #a0c5d1;
+}
+
+
+body{
+    background:url('../img/bg.jpg') no-repeat 50% -250px;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+}
+
+a, a:visited {
+	outline:none;
+	color:#1c4f64;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+section, footer, header{
+	display: block;
+}
+
+
+/*----------------------------
+	The Header
+-----------------------------*/
+
+
+header{
+	background-color:#fff;
+	background-image: linear-gradient(top, #FFFFFF 0%, #EDEDED 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #EDEDED 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EDEDED 100%);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EDEDED 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EDEDED 100%);
+	
+	padding:20px;
+	box-shadow:0 2px 4px rgba(0,0,0,0.3);
+}
+
+header h1, header h2{
+	text-align:center;
+	font-weight: normal;
+}
+
+header h1{
+	font: 42px/50px 'Dancing Script', sans-serif;
+	color:#5e676d;
+}
+
+header h2{
+	font-style:italic;
+	font-size:13px;
+	color:#b2483a;
+}
+
+

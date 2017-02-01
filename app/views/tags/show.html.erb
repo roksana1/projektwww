@@ -1,0 +1,17 @@
+    <%= render partial: 'articles/menu' %>
+<div class="blog-log">
+    <div class="container">
+        <div class="panel panel-default widoczek log">
+          <h1>Artykuły otagowane   <%= @tag.name %></h1>
+          
+          <ul>
+            <% @tag.articles.each do |article| %>
+              <li><%= link_to article.title, article_path(article) %></li>
+            <% end %>
+          </ul>
+        <div class="panel-footer">
+          <a><%= link_to 'Wróć', articles_path %></a> 
+        </div>
+   </div>
+  </div>
+</div>

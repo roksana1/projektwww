@@ -1,0 +1,10 @@
+<div class="commentbody">
+  <h4><b><%= comment.author_name %></b></h4>
+  <h6><p>Dodane <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> temu</p></h6>
+
+  <p class="comment"><%= comment.body %></p>
+  <% if logged_in? %>
+  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span><%= link_to "  usuń", [@comment.article, comment], method: :delete, data: {confirm: "Czy na pewno chcesz usunąć komentarz?"} %>
+
+  <% end %>
+</div>

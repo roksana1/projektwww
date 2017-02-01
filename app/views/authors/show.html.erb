@@ -1,0 +1,12 @@
+<p>
+  <strong>Login:</strong>
+  <%= @author.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @author.email %>
+</p>
+
+<%= link_to 'Edytuj', edit_author_path(@author) %> |
+<%= link_to 'Wróć', authors_path %>
